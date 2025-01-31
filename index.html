@@ -39,6 +39,25 @@
 
         <a href="myMovie.html">Link to myMovie</a>
 
+        <hr>
+
+        <h3>Code</h3>
+        <p>This code features a decorator to create a singleton class.</p>
+        <pre>
+            def singleton(myClass):
+                instances = {}
+                def getInstance(*args, **kwargs):
+                    if myClass not in instances:
+                        instances[myClass] = myClass(*args, **kwargs)
+                    return instances[myClass]
+                return getInstance
+
+            @singleton
+            class TestClass(object):
+                pass 
+        </pre>
+        <a src="https://code.pieces.app/collections/python">Source of the code.</a>
+
     </body>
 
 
